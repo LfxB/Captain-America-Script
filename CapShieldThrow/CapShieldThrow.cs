@@ -3037,7 +3037,7 @@ namespace CapShieldThrow
                 }
                 else
                 {
-                    if (!CapCommunicator.DoesScriptCommunicatorMenuExist())
+                    if (!CapCommunicator.ScriptCommunicatorMenuDllExists())
                     {
                         _menuPool.LastUsedMenu.IsVisible = !_menuPool.LastUsedMenu.IsVisible;
                         InputTimer = Game.GameTime + InputWait;
@@ -3293,7 +3293,7 @@ namespace CapShieldThrow
             }
             else
             {
-                if (CapCommunicator.IsScriptCommunicatorMenuBlocked())
+                if (CapCommunicator.ScriptCommunicatorMenuIsBlocked())
                 {
                     Wait(350);
                     CapCommunicator.UnblockScriptCommunicatorModMenu();
